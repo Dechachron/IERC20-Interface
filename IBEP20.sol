@@ -1,7 +1,7 @@
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.7;
+// SPDX-License-Identifier: Unlicensed
+pragma solidity 0.6.12;
 
-interface IBEP20 
+interface IERC20
 {
     function totalSupply() external view returns (uint256);
     function balanceOf(address account) external view returns (uint256);
@@ -13,7 +13,7 @@ interface IBEP20
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-interface IBEP20Metadata is IBEP20 {
+interface IERC20Metadata is IERC20 {
     function name() external view returns (string memory);
     function symbol() external view returns (string memory);
     function decimals() external view returns (uint8);
